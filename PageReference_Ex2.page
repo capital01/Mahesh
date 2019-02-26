@@ -1,0 +1,16 @@
+<apex:page controller="PageReference_Ex2" >
+<apex:form >
+<apex:pageblock title="Select Information ">]
+	<apex:commandlink value="refere" action="{!show}"/>
+	<apex:pageblocksection >
+		<apex:selectList size="1" value="{!selected}">
+			<apex:selectOption itemlabel="None" Itemvalue="none"/>
+			<apex:selectOption itemlabel="Account" Itemvalue="001"/>
+			<apex:selectOption itemlabel="Contact" Itemvalue="003"/>
+			<apex:selectOption itemlabel="Opportunity" Itemvalue="006"/>
+			
+		</apex:selectList>
+	</apex:pageblocksection> 
+</apex:pageblock>
+</apex:form>
+</apex:page>

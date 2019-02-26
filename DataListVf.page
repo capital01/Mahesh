@@ -1,0 +1,20 @@
+<apex:page StandardController="Contact" recordSetVar="items" >
+	<style>
+		.class{
+		background :#4ABBB1;
+		font-color :Red;
+		}
+	</style>
+<apex:datalist value="{!items}" var="i" style="background:#D5C9BC" StyleClass="class"  dir="LTR" rows="10" >
+	{!i.firstName}
+	{!i.LastName}
+</apex:datalist>
+
+<br/><br/>
+
+ 	<apex:repeat value="{!items}" var="a">
+ 		{!a.FirstName}
+ 	</apex:repeat>
+ 
+
+</apex:page>

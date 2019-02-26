@@ -1,0 +1,23 @@
+<apex:page standardcontroller="Contact" title="Contact" >
+<h6>
+Contacts not associated with accounts are private and cannot be viewed by other users or included in reports.
+
+</h6>
+<apex:form title="Contact Details " >
+<apex:pageblock title="Contact Details ">
+<apex:pageblockbuttons title="Conatct Details">
+<apex:commandButton value="Save" action="{!Save}"/>
+<apex:commandButton value="Cancel" action="{!Cancel}"/>
+
+</apex:pageblockbuttons>
+<apex:pageblocksection title="Contact Information " collapsible="false">
+<apex:inputfield value="{!contact.firstname}"/>
+<apex:inputfield value="{!contact.leadSource}"/>
+<!-- Begin Default Content REMOVE THIS -->
+<h1>Congratulations</h1>
+This is your new Page
+<!-- End Default Content REMOVE THIS -->
+</apex:pageblocksection>
+</apex:pageblock>
+</apex:form>
+</apex:page>

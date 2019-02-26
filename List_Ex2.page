@@ -1,0 +1,13 @@
+<apex:page controller="List_Ex2" >
+<apex:form >
+	<apex:pageBlock title="List_Ex2" >
+		<apex:inputtext value="{!details}"/> <br/>
+		
+	<apex:commandButton value="submit" action="{!Submit}" />
+		<apex:pageBlocktable value="{!branch}" var="a" rendered = "{branch.size()>0}">
+			<apex:column value="{!a}"/>
+		</apex:pageBlocktable>
+		
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

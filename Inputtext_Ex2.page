@@ -1,0 +1,41 @@
+<apex:page >
+<apex:sectionHeader Title="Employee" subtitle="New Employee" />
+<apex:form >
+	<apex:pageBlock Title="Employee Information">
+		<apex:pageBlocksection title="Account Information " collapsible="false" columns="1">
+			<apex:pageblocksectionItem >
+				<apex:outputlabel value="FirstName" />
+				<apex:inputtext />
+			</apex:pageblocksectionItem>
+			<apex:pageblocksectionItem >
+				<apex:outputlabel value="LastName" />
+				<apex:inputtext />
+			</apex:pageblocksectionItem>
+			<apex:pageblocksectionItem >
+				<apex:outputlabel value="Phone" />
+				<apex:inputtext />
+			</apex:pageblocksectionItem>
+			<apex:pageblocksectionItem >
+				<apex:outputlabel value="Email" />
+				<apex:inputtext />
+			</apex:pageblocksectionItem>
+			<apex:pageblocksectionItem >
+				<apex:outputlabel value="Description" />
+				<apex:inputtextarea />
+			</apex:pageblocksectionItem>
+			<apex:pageblocksectionItem >
+				<apex:outputlabel value="active" />
+				<apex:inputCheckbox />
+			</apex:pageblocksectionItem>
+			<apex:pageblocksectionItem >
+				<apex:outputlabel value="Password" />
+				<apex:inputsecret />
+			</apex:pageblocksectionItem>
+		</apex:pageBlocksection>
+		<apex:pageblockButtons location="top">
+			<apex:commandButton value="Save" action="{!Save}"/>
+			<apex:commandButton value="Cancel" action="{!cancel}"/>
+		</apex:pageblockButtons>
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page Controller="List_Ex1">
+<apex:form id="id">
+<apex:pageblock Title="List" >
+<apex:inputtext value="{!Places}"/>
+<apex:commandButton value="add" action="{!add}" rerender="id"/>
+<apex:pageblockTable value="{!Cites}" var="a" rendered ="{!cites.size>0}">
+<apex:column value="{!a}" HeaderValue="Cites"/>
+</apex:pageblockTable>
+</apex:pageblock>
+</apex:form>
+</apex:page>

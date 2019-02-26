@@ -1,0 +1,12 @@
+<apex:page Controller="PageReference_Ex1" >
+	<apex:form >
+		<apex:pageBlock title="PageReference">
+			
+			|<apex:pageblocksection >
+								<apex:commandLink value="account" action="{!callme}"/>
+				
+			</apex:pageblocksection>
+		</apex:pageBlock>
+	</apex:form>
+	
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page id="thepage">
+<apex:form >
+ <apex:tabpanel Switchtype="client " Selectedtab="This is Tab" id="tab2Name">
+  <apex:tab label="Tab1" name="Tab1Name" id="tabone" >
+ 
+ this is tab1
+ </apex:tab>
+ <apex:tab label="Tab2" name="tab2Name" id="tabtwo"  >
+ <H1> this is tab2</H1>
+ </apex:tab>
+ </apex:tabpanel>
+</apex:form>
+</apex:page>

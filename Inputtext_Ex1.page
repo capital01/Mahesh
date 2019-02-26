@@ -1,0 +1,37 @@
+<apex:page >
+<apex:sectionHeader title="Emploee" subtitle="new Employee"  help="www.google.com"/>
+<apex:form >
+<apex:pageblock title="Employee Information" mode="detail">
+	<apex:pageblockbuttons location="Top">
+		<apex:commandButton value="Save" action="{!Save}"/>
+		<apex:commandButton value="cancel" action="{!cancel}"/>
+	</apex:pageblockbuttons>
+		LastName: <apex:inputtext /><br/>
+		FirstName: <apex:inputtext /><br/>
+		Phone : <apex:inputtext />
+</apex:pageblock>
+
+	<apex:pageblock Title="Employee">
+		<apex:pageblockbuttons location="Top">
+		<apex:commandButton value="Save" action="{!Save}"/>
+		<apex:commandButton value="cancel" action="{!cancel}"/>
+	</apex:pageblockbuttons>
+		<apex:pageblocksection title="Employee Information ">
+			<apex:outputlabel value="LastName"/>
+			<apex:inputtext />
+			<apex:outputlabel value="FirstName"/>
+			<apex:inputtext />
+			<apex:outputlabel value="Phone"/>
+			<apex:inputtext />
+		</apex:pageblocksection>
+	</apex:pageblock>
+	<apex:pageblock title="Employee Information">
+		<apex:pageblocksection title="Employee Information "  >
+			<apex:pageblocksectionItem >
+				
+			</apex:pageblocksectionItem>
+			
+		</apex:pageblocksection>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

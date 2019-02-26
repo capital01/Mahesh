@@ -1,0 +1,35 @@
+<apex:page controller="EX_Controller_Customer" sidebar="false" >
+	<apex:form >
+		<apex:outputpanel id="EBlock" >
+			<apex:pageblock title="Customer INformation" rendered="{!editblock}" >
+				<apex:pageblocksection >
+					<apex:inputfield value="{!le.firstName}"/>
+					<apex:inputfield value="{!le.lastName}"/>
+					<apex:inputfield value="{!le.Company}" label="customerName"/> 
+					<apex:inputfield value="{!le.phone}"/>
+					<apex:inputfield value="{!le.Email}"/>
+				</apex:pageblocksection>
+				<apex:pageblockButtons >
+					<apex:commandButton value="save" action="{!insertrecord}" reRender="EBlock,DBlock"/>
+					<apex:commandButton value="cancel" action="{!backtoHome}"/>
+					<apex:commandButton value="Save & New " action="{!insertnewRec}" immediate="true"/>
+				</apex:pageblockButtons>
+			</apex:pageblock>
+		</apex:outputpanel>
+		<apex:outputpanel id="DBlock" >
+			<apex:pageblock title="Customer INformation " rendered="{!pgblock}">
+				<apex:pageblocksection >
+					<apex:outputfield value="{!le.firstname}"/>
+					<apex:outputfield value="{!le.lastName}"/>
+					<apex:outputfield value="{!le.Company}" label="Customer Nmae"/>
+					<apex:outputfield value="{!le.phone}"/>
+					<apex:outputfield value="{!le.Email}"/>
+				</apex:pageblocksection>
+				<apex:pageblockButtons >
+					<apex:commandButton value="Edit" action="{!editrec}"  reRender="EBlock,DBlock"  />
+					<apex:commandButton value="BackToHome" action="{!backtoHome}"/>
+				</apex:pageblockButtons>
+			</apex:pageblock>
+		</apex:outputpanel>
+	</apex:form>
+</apex:page>

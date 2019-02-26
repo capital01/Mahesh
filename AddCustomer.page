@@ -1,0 +1,50 @@
+<apex:page controller="AddCustomer_controller" showHeader="true">
+<apex:form >
+
+	<style>
+		.class{
+			font-color :#234455;
+			bg-color :#445566;
+			font:10px;
+		}
+	</style>
+   <BR/><BR/><BR/><BR/>
+      <!----------------------- EDIT BLCOK-------------------->
+   <apex:outputPanel id="EBlock" styleclass="class" > 
+    <apex:pageBlock title="Customer Information" rendered="{!editblock}">
+        <apex:pageBlockSection >
+            <apex:inputField value="{!ld.firstname}"/>
+            <apex:inputField value="{!ld.lastname}"/>
+            <apex:inputField value="{!ld.company}" label="Customer Name"/>
+            <apex:inputField value="{!ld.phone}"/>
+            <apex:inputField value="{!ld.email}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons > 
+             <apex:commandButton value="Save"  action="{!insertRecord}" reRender="EBlock,DBlock"/>
+             <apex:commandButton value="Save&New" action="{!savenewrecord}" />
+             <apex:commandButton value="Cancel" action="{!backtohome}" immediate="true"/>
+       </apex:pageBlockButtons>        
+   </apex:pageBlock> 
+   </apex:outputPanel> 
+   
+   <!----------------- Detail Block------------------>
+   <apex:outputPanel id="DBlock"> 
+   <apex:pageBlock title="Customer Information" rendered="{!pgblock}">
+   <apex:pageBlockSection >
+            <apex:outputField value="{!ld.firstname}"/>
+            <apex:outputField value="{!ld.lastname}"/>
+            <apex:outputField value="{!ld.company}" label="Customer Name"/>
+            <apex:outputField value="{!ld.phone}"/>
+            <apex:outputField value="{!ld.email}"/>
+   </apex:pageBlockSection>
+    <apex:pageBlockButtons > 
+             <apex:commandButton value="Edit"  action="{!editrec}" reRender="EBlock,DBlock"/>
+             <apex:commandButton value="Back To Home" action="{!backtohome}" />
+       </apex:pageBlockButtons>        
+   </apex:pageBlock>
+   </apex:outputPanel> 
+   
+   
+</apex:form>
+</apex:page>
